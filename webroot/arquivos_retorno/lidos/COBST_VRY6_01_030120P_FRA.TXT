@@ -1,0 +1,195 @@
+1                                                                                                                                    
+ BANCO SANTANDER (BRASIL) S/A             AVISO DE MOVIMENTACAO DA CARTEIRA DE TITULOS        DT.GER.: 03/01/2020           03.40.57 
+ YK - COBRANCA                                                          DEST.: 001-3795-RIO-R.DIAS DA CRUZ                           
+                     PRODUTO: COBRANCA SIMPLES                        MODALIDADE: RAPIDA COM REGISTRO                                
+ NOME DO CLIENTE                                    BANCO AGENCIA  CONTA COBRANCA   IDENT BENEFICIARIO  DATA MOVIMENTO  NO.AVISO     
+ ALDEIA ESCOLA EXPERIMENTAL LTDA                     033   3795.8       130007188        835163.5         02/01/2020     0000690     
+ END: R DONA CLAUDINA 316                                    NOME AG.: RIO-R.DIAS DA CRUZ                                            
+ CEP: 20725-060    RIO DE JANEIRO         RJ                                                                                         
+                                                                                                                                     
+ LANCAMENTOS A SEREM EFETUADOS EM CONTA CORRENTE                                                                                     
+ DATA       HISTORICO                     CONTA CREDITO       CONTA DEBITO  VALOR DO CREDITO/DEBITO      DATA DE DESBLOQUEIO         
+ 03/01      COB DINHEIRO                  000130007188                                     18.153,28                                 
+ 03/01      COB BLOQ COMP                 000130007188                                    163.940,94                                 
+ 03/01      00000                         000000000000                                     20.031,83                                 
+                                                                                                                                     
+ ------------------------------------------------ RESUMO DE MOVIMENTACAO DA CARTEIRA ------------------------------------------------
+                                                                                   VENCIDOS                      A VENCER            
+                                                                               QTD          VALOR           QTD           VALOR      
+ SALDO ANTERIOR                   231         421.663,27  TITULOS                   46         77.368,18         83        122.542,57
+    ENTRADAS                        5           4.827,68  ATE 10 DIAS               46         77.368,18         54        105.441,78
+    ENTRADAS-DDA                    0               0,00  DE 11 A 30 DIAS            0              0,00         12         10.163,85
+    LIQUIDACOES                    59         132.855,62  ACIMA DE 30 DIAS           0              0,00          5          2.420,92
+       CHEQUES                      0               0,00  EM CARTORIO                0              0,00                             
+       DINHEIRO                     8          20.451,36                                                                             
+       COMPENSACAO                 51         112.404,26                                                                             
+       CIP                          0               0,00                                                                             
+    LIQUIDACOES-DDA                37          72.915,18                                                                             
+       CHEQUES                      0               0,00                                                                             
+       DINHEIRO                     9          18.313,20                                                                             
+       COMPENSACAO                 28          54.601,98                                                                             
+       CIP                          0               0,00                                                                             
+    BAIXAS                         11          20.809,40                                                                             
+    BAIXAS-DDA                      0               0,00                                                                             
+ SALDO ATUAL                      129         199.910,75                                                                             
+                                                                                                                                     
+ ------------------------------------------------------------- ENTRADAS -------------------------------------------------------------
+     PAGADOR          SEU NUMERO  NOSSO NUMERO   VENCIMENTO      VALOR TITULO       TARIFAS      N.BORDERO     EVENTO                
+ EVANDRO DA MAT       0000077077  0000000770779  10/01/2020            537,58          0,00                    ENTRADA               
+ EVANDRO DA MAT       0000077078  0000000770787  10/02/2020            537,58          0,00                    ENTRADA               
+ ALINE TAVARES        0000077087  0000000770876  06/01/2020          1.793,59          0,00                    ENTRADA               
+ RENATO FAGUNDE       0000077088  0000000770884  06/01/2020            973,25          0,00                    ENTRADA               
+ SIMONE SIQUEIR       0000077089  0000000770892  06/01/2020            985,68          0,00                    ENTRADA               
+ TOTAL                                                               4.827,68          0,00                                          
+                                                                                                                                     
+ ----------------------------------------------------------- LIQUIDACOES ------------------------------------------------------------
+     PAGADOR    SEU NUMERO  NOSSO NUMERO VENCTO DT PGT    VALOR TITULO JUROS/MORA  ABAT/DESC      VALOR PAGO TARIFAS(T) EVENTO       
+                                                                                                             CUSTAS (C)              
+ ALESSANDRA LEM 0000076719 0000000767190 020120 020120        2.904,06       0,00       0,00        2.904,06      1,70T LIQ.CX.DINH. 
+ ANA LUCIA LOUR 0000076776 0000000767760 020120 020120        1.793,59       0,00       0,00        1.793,59      1,70T LIQ.CX.DINH. 
+ FLAVIA DE PAIV 0000074678 0000000746789 020120 020120          133,26       0,00       0,00          133,26      1,70T LIQ.I.BANKING
+ MICHEL ANTONIO 0000076714 0000000767140 020120 020120        2.331,77       0,00       0,00        2.331,77      1,70T LIQ.I.BANKING
+ MARCELO DA CRU 0000076718 0000000767182 020120 020120        3.109,23       0,00      79,96        3.029,27      1,70T LIQ.I.BANKING
+ LILIAN DE MELO 0000076725 0000000767255 020120 020120        2.331,77       0,00       0,00        2.331,77      1,70T LIQ.I.BANKING
+ RICARDO SOLON  0000076728 0000000767280 020120 020120        2.331,77       0,00       0,00        2.331,77      1,70T LIQ.I.BANKING
+ CINTIA SANTOS  0000076747 0000000767476 020120 020120        3.109,23       0,00      79,96        3.029,27      1,70T LIQ.I.BANKING
+ PRISCILLA CELE 0000076765 0000000767654 020120 020120        2.904,06       0,00       0,00        2.904,06      1,70T LIQ.I.BANKING
+ RODRIGO ROCHA  0000076780 0000000767808 020120 020120        2.331,77       0,00       0,00        2.331,77      1,70T LIQ.I.BANKING
+1                                                                                                                                    
+ BANCO SANTANDER (BRASIL) S/A             AVISO DE MOVIMENTACAO DA CARTEIRA DE TITULOS        DT.GER.: 03/01/2020           03.40.57 
+ YK - COBRANCA                                                          DEST.: 001-3795-RIO-R.DIAS DA CRUZ                           
+                     PRODUTO: COBRANCA SIMPLES                        MODALIDADE: RAPIDA COM REGISTRO                                
+ NOME DO CLIENTE                                    BANCO AGENCIA  CONTA COBRANCA   IDENT BENEFICIARIO  DATA MOVIMENTO  NO.AVISO     
+ ALDEIA ESCOLA EXPERIMENTAL LTDA                     033   3795.8       130007188        835163.5         02/01/2020     0000690     
+ END: R DONA CLAUDINA 316                                    NOME AG.: RIO-R.DIAS DA CRUZ                                            
+ CEP: 20725-060    RIO DE JANEIRO         RJ                                                                                         
+                                                                                                                                     
+ ----------------------------------------------------------- LIQUIDACOES ------------------------------------------------------------
+     PAGADOR    SEU NUMERO  NOSSO NUMERO VENCTO DT PGT    VALOR TITULO JUROS/MORA  ABAT/DESC      VALOR PAGO TARIFAS(T) EVENTO       
+                                                                                                             CUSTAS (C)              
+ THIAGO DE ABRE 0000076788 0000000767883 020120 020120        2.571,62       0,00       0,00        2.571,62      1,70T LIQ.I.BANKING
+ LICIA LESSA DE 0000076795 0000000767956 020120 020120        2.776,79       0,00       0,00        2.776,79      1,70T LIQ.I.BANKING
+ BRUNO RAINHO M 0000076811 0000000768111 020120 020120        2.443,45       0,00       0,00        2.443,45      1,70T LIQ.I.BANKING
+ FLAVIA DE PAIV 0000076854 0000000768545 020120 020120        1.793,59       0,00      79,96        1.713,63      1,70T LIQ.I.BANKING
+ MARINA FULAS C 0000076885 0000000768855 020120 020120        2.331,77       0,00       0,00        2.331,77      1,70T LIQ.I.BANKING
+ DENISE HOLLAND 0000076889 0000000768898 020120 020120        1.599,18       0,00      79,96        1.519,22      1,70T LIQ.I.BANKING
+ LIVIA CARVALHO 0000076893 0000000768936 020120 020120        1.967,65       0,00     259,61        1.708,04      1,70T LIQ.I.BANKING
+ KAIO SANTOS DE 0000073688 0000000736880 201219 020120          324,52       7,92       0,00          332,44      1,70T LIQ COMPENS-D
+ LUCIANA CARVAL 0000073841 0000000738417 201219 020120          399,80       9,69       0,00          409,49      1,70T LIQ COMPENS-D
+ MARLOS DA COST 0000075741 0000000757411 020120 020120          429,84       0,00       0,00          429,84      1,70T LIQ COMPENS  
+ ROBERTA XAVIER 0000075780 0000000757802 100120 020120          349,43       0,00       0,00          349,43      1,70T LIQ COMPENS-D
+ EDUARDO VIDAL  0000075784 0000000757845 210120 020120          432,69       0,00       0,00          432,69      1,70T LIQ COMPENS-D
+ DANIELA GOMES  0000076667 0000000766674 020120 020120        1.935,28       0,00       0,00        1.935,28      1,70T LIQ COMPENS-D
+ VIVIANA BESSA  0000076704 0000000767042 020120 020120        2.904,06       0,00       0,00        2.904,06      1,70T LIQ COMPENS  
+ FELIPE RODRIGU 0000076708 0000000767085 020120 020120        2.331,77       0,00       0,00        2.331,77      1,70T LIQ COMPENS-D
+ MARLOS DA COST 0000076710 0000000767107 020120 020120        1.967,65       0,00       0,00        1.967,65      1,70T LIQ COMPENS  
+ PATRICIA SILVA 0000076716 0000000767166 020120 020120        2.331,77       0,00       0,00        2.331,77      1,70T LIQ COMPENS  
+ CRISTIANE MARI 0000076717 0000000767174 020120 020120        1.492,47       0,00       0,00        1.492,47      1,70T LIQ COMPENS-D
+ JULIANA CHAVES 0000076722 0000000767220 020120 020120        1.793,59       0,00       0,00        1.793,59      1,70T LIQ COMPENS  
+ LUCYENNE DA SI 0000076730 0000000767301 020120 020120        1.599,18       0,00      79,96        1.519,22      1,70T LIQ COMPENS  
+ ROBERTA XAVIER 0000076733 0000000767336 020120 020120        2.571,62       0,00       0,00        2.571,62      1,70T LIQ COMPENS-D
+ FABIO CARNEIRO 0000076734 0000000767344 020120 020120        2.776,79       0,00     129,81        2.646,98      1,70T LIQ COMPENS  
+ ANDREIA PRESTE 0000076736 0000000767360 020120 020120        1.599,18       0,00      79,96        1.519,22      1,70T LIQ COMPENS  
+ RADHA LILIANE  0000076737 0000000767379 020120 020120        2.571,62       0,00      64,90        2.506,72      1,70T LIQ COMPENS  
+ RODRIGO DA SIL 0000076742 0000000767425 020120 020120        2.331,77       0,00       0,00        2.331,77      1,70T LIQ COMPENS  
+ ELAINE DA SILV 0000076744 0000000767441 020120 020120        1.793,59       0,00       0,00        1.793,59      1,70T LIQ COMPENS  
+ KATIA OLIVEIRA 0000076749 0000000767492 020120 020120        1.793,59       0,00      79,96        1.713,63      1,70T LIQ COMPENS  
+ KATIA OLIVEIRA 0000076752 0000000767522 020120 020120        1.793,59       0,00      79,96        1.713,63      1,70T LIQ COMPENS  
+ LIANA LOMBA LO 0000076753 0000000767530 020120 020120        2.904,06       0,00     319,84        2.584,22      1,70T LIQ COMPENS  
+ CINTIA MARIA L 0000076754 0000000767549 020120 020120        1.793,59       0,00       0,00        1.793,59      1,70T LIQ COMPENS-D
+ FERNANDO DA SI 0000076758 0000000767581 020120 020120        1.793,59       0,00       0,00        1.793,59      1,70T LIQ COMPENS-D
+ EVANDRO MACHAD 0000076759 0000000767590 020120 020120        2.443,45       0,00       0,00        2.443,45      1,70T LIQ COMPENS  
+ LUCYENNE DA SI 0000076762 0000000767620 020120 020120        1.793,59       0,00       0,00        1.793,59      1,70T LIQ COMPENS  
+ LUIZ EDUARDO C 0000076766 0000000767662 020120 020120        1.793,59       0,00       0,00        1.793,59      1,70T LIQ COMPENS  
+ LIANA LOMBA LO 0000076767 0000000767670 020120 020120        2.904,06       0,00     319,84        2.584,22      1,70T LIQ COMPENS  
+ MARTA CRISTINA 0000076768 0000000767689 020120 020120        2.443,45       0,00       0,00        2.443,45      1,70T LIQ COMPENS  
+ LUCIANA CARVAL 0000076770 0000000767700 020120 020120        1.793,59       0,00      79,96        1.713,63      1,70T LIQ COMPENS-D
+ VIVIANE MOTTA  0000076771 0000000767719 100120 020120        1.793,59       0,00       0,00        1.793,59      1,70T LIQ COMPENS  
+ FATIMA DA SILV 0000076772 0000000767727 020120 020120        2.904,06       0,00       0,00        2.904,06      1,70T LIQ COMPENS  
+ ANDREZA DOS SA 0000076779 0000000767794 020120 020120        1.793,59       0,00      79,96        1.713,63      1,70T LIQ COMPENS  
+ RADHA LILIANE  0000076782 0000000767824 020120 020120        2.331,77       0,00      64,90        2.266,87      1,70T LIQ COMPENS  
+ NATASHA KELBER 0000076789 0000000767891 020120 020120        2.571,62       0,00     389,42        2.182,20      1,70T LIQ COMPENS-D
+ MARCELI VILLAS 0000076790 0000000767905 020120 020120        2.187,72       0,00      64,90        2.122,82      1,70T LIQ COMPENS  
+ ANA LUZIA NICA 0000076791 0000000767913 020120 020120        2.571,62       0,00       0,00        2.571,62      1,70T LIQ COMPENS-D
+ CARMEN LUCIA M 0000076792 0000000767921 020120 020120        2.571,62       0,00      64,90        2.506,72      1,70T LIQ COMPENS  
+1                                                                                                                                    
+ BANCO SANTANDER (BRASIL) S/A             AVISO DE MOVIMENTACAO DA CARTEIRA DE TITULOS        DT.GER.: 03/01/2020           03.40.57 
+ YK - COBRANCA                                                          DEST.: 001-3795-RIO-R.DIAS DA CRUZ                           
+                     PRODUTO: COBRANCA SIMPLES                        MODALIDADE: RAPIDA COM REGISTRO                                
+ NOME DO CLIENTE                                    BANCO AGENCIA  CONTA COBRANCA   IDENT BENEFICIARIO  DATA MOVIMENTO  NO.AVISO     
+ ALDEIA ESCOLA EXPERIMENTAL LTDA                     033   3795.8       130007188        835163.5         02/01/2020     0000690     
+ END: R DONA CLAUDINA 316                                    NOME AG.: RIO-R.DIAS DA CRUZ                                            
+ CEP: 20725-060    RIO DE JANEIRO         RJ                                                                                         
+                                                                                                                                     
+ ----------------------------------------------------------- LIQUIDACOES ------------------------------------------------------------
+     PAGADOR    SEU NUMERO  NOSSO NUMERO VENCTO DT PGT    VALOR TITULO JUROS/MORA  ABAT/DESC      VALOR PAGO TARIFAS(T) EVENTO       
+                                                                                                             CUSTAS (C)              
+ CARMEN LUCIA M 0000076798 0000000767980 020120 020120        2.904,06       0,00      79,96        2.824,10      1,70T LIQ COMPENS  
+ KAIO SANTOS DE 0000076799 0000000767999 020120 020120        2.776,79       0,00       0,00        2.776,79      1,70T LIQ COMPENS-D
+ GABRIEL SOUZA  0000076803 0000000768030 020120 020120        2.571,62       0,00       0,00        2.571,62      1,70T LIQ COMPENS-D
+ ROGERIO MENEZE 0000076804 0000000768049 020120 020120        1.492,47       0,00       0,00        1.492,47      1,70T LIQ COMPENS  
+ AMANDA CRUZ ME 0000076805 0000000768057 020120 020120        2.571,62       0,00      64,90        2.506,72      1,70T LIQ COMPENS-D
+ BEATRIZ NETO L 0000076806 0000000768065 020120 020120        2.331,77       0,00     194,71        2.137,06      1,70T LIQ COMPENS  
+ DIOGENES BISPO 0000076809 0000000768090 020120 020120        2.331,77       0,00     324,52        2.007,25      1,70T LIQ COMPENS  
+ RUI ALEXANDRE  0000076810 0000000768103 020120 020120        1.793,59       0,00       0,00        1.793,59      1,70T LIQ COMPENS-D
+ BEATRIZ NETO L 0000076812 0000000768120 020120 020120        2.904,06       0,00     239,88        2.664,18      1,70T LIQ COMPENS  
+ CELSO ALEX PER 0000076813 0000000768138 020120 020120        2.443,45       0,00       0,00        2.443,45      1,70T LIQ COMPENS-D
+ VIVIANE VIDAL  0000076814 0000000768146 020120 020120        1.793,59       0,00       0,00        1.793,59      1,70T LIQ COMPENS  
+ ISABELE FERREI 0000076815 0000000768154 020120 020120        2.904,06       0,00       0,00        2.904,06      1,70T LIQ COMPENS  
+ ANDRE LUIZ ROD 0000076817 0000000768170 020120 020120        2.904,06       0,00       0,00        2.904,06      1,70T LIQ COMPENS  
+ MARCELI VILLAS 0000076821 0000000768219 020120 020120        1.793,59       0,00      79,96        1.713,63      1,70T LIQ COMPENS  
+ AMANDA CRUZ ME 0000076822 0000000768227 020120 020120        1.793,59       0,00      79,96        1.713,63      1,70T LIQ COMPENS-D
+ GISELE ABREU L 0000076823 0000000768235 020120 020120        1.793,59       0,00       0,00        1.793,59      1,70T LIQ COMPENS  
+ ANDREA DAVEIRO 0000076824 0000000768243 020120 020120        1.793,59       0,00       0,00        1.793,59      1,70T LIQ COMPENS  
+ THAIS FERNANDE 0000076829 0000000768294 020120 020120        1.793,59       0,00       0,00        1.793,59      1,70T LIQ COMPENS  
+ LUCIANA DE ALB 0000076830 0000000768308 020120 020120        2.551,84       0,00       0,00        2.551,84      1,70T LIQ COMPENS-D
+ ALINE MENEZES  0000076831 0000000768316 020120 020120        2.331,77       0,00       0,00        2.331,77      1,70T LIQ COMPENS  
+ TATIANA ALVES  0000076832 0000000768324 020120 020120        2.187,72       0,00       0,00        2.187,72      1,70T LIQ COMPENS  
+ ANDREZA DOS SA 0000076833 0000000768332 020120 020120        2.571,62       0,00      64,90        2.506,72      1,70T LIQ COMPENS  
+ DANIEL MORAES  0000076835 0000000768359 020120 020120        2.187,72       0,00       0,00        2.187,72      1,70T LIQ COMPENS  
+ LETICIA CASTIL 0000076836 0000000768367 020120 020120        2.187,72       0,00       0,00        2.187,72      1,70T LIQ COMPENS  
+ MARIA FERNANDA 0000076837 0000000768375 020120 020120        2.571,62       0,00     129,81        2.441,81      1,70T LIQ COMPENS  
+ PEDRO PAULO DE 0000076845 0000000768456 020120 020120        2.571,62       0,00     259,61        2.312,01      1,70T LIQ COMPENS  
+ MILENA MACAO T 0000076847 0000000768472 020120 020120        2.904,06       0,00       0,00        2.904,06      1,70T LIQ COMPENS  
+ ANDRE VINICIUS 0000076848 0000000768480 020120 020120        2.904,06       0,00     159,92        2.744,14      1,70T LIQ COMPENS-D
+ MARCELO RODRIG 0000076858 0000000768588 020120 020120        1.967,65       0,00       0,00        1.967,65      1,70T LIQ COMPENS-D
+ MARCO ANTONIO  0000076862 0000000768626 020120 020120        1.793,59       0,00      79,96        1.713,63      1,70T LIQ COMPENS  
+ AMANDA BARCELL 0000076869 0000000768693 020120 020120        2.443,45       0,00       0,00        2.443,45      1,70T LIQ COMPENS  
+ RAFAEL DUARTE  0000076877 0000000768774 020120 020120        2.904,06       0,00      79,96        2.824,10      1,70T LIQ COMPENS-D
+ MARCO ANTONIO  0000076878 0000000768782 020120 020120        1.793,59       0,00      79,96        1.713,63      1,70T LIQ COMPENS  
+ RENATO FAGUNDE 0000076882 0000000768820 020120 020120        1.492,47       0,00     519,22          973,25      1,70T LIQ COMPENS  
+ EDUARDO VIDAL  0000076890 0000000768901 020120 020120        1.492,47       0,00       0,00        1.492,47      1,70T LIQ COMPENS-D
+ RODRIGO SALES  0000076894 0000000768944 020120 020120        2.904,06       0,00      79,96        2.824,10      1,70T LIQ COMPENS-D
+ VANESSA RODRIG 0000076898 0000000768987 020120 020120        1.793,59       0,00     159,92        1.633,67      1,70T LIQ COMPENS  
+ FABIO LUIS GOM 0000076900 0000000769002 020120 020120        1.793,59       0,00       0,00        1.793,59      1,70T LIQ COMPENS-D
+ DENISE DO CARM 0000076901 0000000769010 020120 020120        2.443,45       0,00       0,00        2.443,45      1,70T LIQ COMPENS  
+ RENATA LOURENC 0000076908 0000000769088 020120 020120        2.331,77       0,00       0,00        2.331,77      1,70T LIQ COMPENS  
+ ARTUR BATISTA  0000076909 0000000769096 020120 020120        1.599,18       0,00       0,00        1.599,18      1,70T LIQ COMPENS-D
+ INGRID TEIXEIR 0000077074 0000000770744 020120 020120        2.172,82       0,00       0,00        2.172,82      1,70T LIQ COMPENS-D
+ TOTAL                                                      207.263,27      17,61   5.154,83      202.126,05    164,90               
+                                                                                                                                     
+ -------------------------------------------------------------- BAIXAS --------------------------------------------------------------
+     PAGADOR    SEU NUMERO    NOSSO NUMERO    VENCIMENTO       VALOR TITULO       TARIFAS    EVENTO                                  
+1                                                                                                                                    
+ BANCO SANTANDER (BRASIL) S/A             AVISO DE MOVIMENTACAO DA CARTEIRA DE TITULOS        DT.GER.: 03/01/2020           03.40.57 
+ YK - COBRANCA                                                          DEST.: 001-3795-RIO-R.DIAS DA CRUZ                           
+                     PRODUTO: COBRANCA SIMPLES                        MODALIDADE: RAPIDA COM REGISTRO                                
+ NOME DO CLIENTE                                    BANCO AGENCIA  CONTA COBRANCA   IDENT BENEFICIARIO  DATA MOVIMENTO  NO.AVISO     
+ ALDEIA ESCOLA EXPERIMENTAL LTDA                     033   3795.8       130007188        835163.5         02/01/2020     0000690     
+ END: R DONA CLAUDINA 316                                    NOME AG.: RIO-R.DIAS DA CRUZ                                            
+ CEP: 20725-060    RIO DE JANEIRO         RJ                                                                                         
+                                                                                                                                     
+ -------------------------------------------------------------- BAIXAS --------------------------------------------------------------
+     PAGADOR    SEU NUMERO    NOSSO NUMERO    VENCIMENTO       VALOR TITULO       TARIFAS    EVENTO                                  
+ ANA LETICIA CO 0000076639    0000000766399   02/01/2020             860,12          0,00    BX.CONF.INST.                           
+ ANA LETICIA CO 0000076721    0000000767212   02/01/2020           3.109,23          0,00    BX.CONF.INST.                           
+ ALINE TAVARES  0000076748    0000000767484   02/01/2020           2.904,06          0,00    BX.CONF.INST.                           
+ MAIRA MASSENA  0000076853    0000000768537   02/01/2020           2.904,06          0,00    BX.CONF.INST.                           
+ RENATO FAGUNDE 0000076882    0000000768820   02/01/2020           1.492,47          0,00    BX.CONF.INST.                           
+ MONICA PEREIRA 0000076320    0000000763209   02/12/2019           1.736,68          0,00    BX AUTOMATICA                           
+ FERNANDA DE AL 0000076326    0000000763268   02/12/2019           1.736,68          0,00    BX AUTOMATICA                           
+ RAQUEL DA SILV 0000076327    0000000763276   02/12/2019           1.443,14          0,00    BX AUTOMATICA                           
+ FERNANDA DE AL 0000076328    0000000763284   02/12/2019           1.443,14          0,00    BX AUTOMATICA                           
+ ANA PAULA CONC 0000076361    0000000763616   02/12/2019           1.736,68          0,00    BX AUTOMATICA                           
+ LARISSA GOMES  0000076377    0000000763772   02/12/2019           1.443,14          0,00    BX AUTOMATICA                           
+ TOTAL                                                            20.809,40          0,00                                            

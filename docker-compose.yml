@@ -1,0 +1,46 @@
+version: '3'
+services:
+
+  aldeia-mysql:
+    image: mysql:latest
+    container_name: aldeia-mysql
+    volumes:
+        - ./mysql:/var/lib/mysql-files
+        - ./mysql/mysql.cnf:/etc/mysql/mysql.cnf
+    ports:
+      - "8106:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    networks:
+      - aldeia-network
+
+  aldeia-nginx:
+    image: nginx:alpine
+    container_name: aldeia-nginx
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/var/www
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - aldeia-network
+
+  aldeia-php-fpm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aldeia-php-fpm
+    volumes:
+      - ./:/var/www
+    networks:
+      - aldeia-network
+
+
+networks:
+  aldeia-network:
+    driver: bridge

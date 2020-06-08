@@ -1,0 +1,14 @@
+1                                                                                                                                    
+ BANCO SANTANDER (BRASIL) S/A             MOVIMENTO DIARIO DE CLIENTES DO MEIO MAGNETICO      DT.GER.: 03/01/2020           03.41.59 
+ YK - COBRANCA                                                          DEST.: 001-3795-RIO-R.DIAS DA CRUZ                           
+ COD.REL: YKD79021                                                                                   DT.REF.: 02/01/2020 PAG.:   459 
+0 PERFIL.:   835163.5 NOME.: ALDEIA ESCOLA EXPERIMENTAL LTDA                                                                         
+0                                |------------------ ACEITOS ------------------|  |---------------- REJEITADOS -----------------|    
+0DESCRICAO EVENTO                   QTDE       VALOR TITULO       VALOR COBRADO      QTDE       VALOR TITULO       VALOR COBRADO     
+0AMBIENTE..: PRODUCAO                                                                                                                
+  INSTRUCAO ACEITA PELA CIP            5           4.827,68                0,00         0               0,00                0,00     
+  BAIXAR CONFORME INSTRUCOES           5          11.269,94                0,00         0               0,00                0,00     
+  LIQUIDACAO INTERNET BANKING         15          34.066,91           33.487,46         0               0,00                0,00     
+  LIQUIDADO NA COMPENSACAO            80         168.498,71          163.940,94         0               0,00                0,00     
+  LIQUIDACAO NO CAIXA DINHEIRO         2           4.697,65            4.697,65         0               0,00                0,00     
+  BAIXA AUTOMATICA                     6           9.539,46                0,00         0               0,00                0,00     

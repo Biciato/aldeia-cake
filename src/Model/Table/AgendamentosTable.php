@@ -1,0 +1,26 @@
+<?php
+namespace App\Model\Table;
+
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+
+
+class AgendamentosTable extends Table
+  {
+    protected $_acessible =
+      [
+        '*' => true
+      ];
+  	public function initialize(array $config): void
+       {
+           $this->addBehavior('Timestamp', [
+               'events' => [
+                   'Model.beforeSave' => [
+                       'data_criacao' => 'new',
+                       'data_modificacao'   => 'always',
+                   ],                   
+               ]
+           ]);
+       }
+  }
+?>
