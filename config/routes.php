@@ -139,9 +139,10 @@ Router::scope('/', function (RouteBuilder $routes) {
 $routes->scope('/api', function (RouteBuilder $builder) {
     $builder->setExtensions(['json']);
     $builder->registerMiddleware('bodyparser', \Cake\Http\Middleware\BodyParserMiddleware::class);
-    $builder->applyMiddleware('bodyparser');
+    $builder->registerMiddleware('checktoken', \App\Middleware\CheckTokenMiddleware::class);
+    $builder->applyMiddleware('checktoken');
 
     $builder->post('/token', ['controller' => 'Token', 'action' => 'token']);
-    $builder->get('/teste', ['controller' => 'Token', 'action' => 'teste']);
+    $builder->post('/recuperar-senha', ['controller' => 'LoginAPI', 'action' => 'recuperarSenha']);
     $builder->fallbacks();
 });

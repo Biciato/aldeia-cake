@@ -16,12 +16,6 @@ declare(strict_types=1);
  */
 namespace App;
 
-use App\Middleware\PersistenceOrmFailedMiddleware;
-use Authentication\AuthenticationService;
-use Authentication\AuthenticationServiceInterface;
-use Authentication\AuthenticationServiceProviderInterface;
-use Authentication\Authenticator\UnauthenticatedException;
-use Authentication\Middleware\AuthenticationMiddleware;
 use Cake\Core\Configure;
 use Cake\Core\Exception\MissingPluginException;
 use Cake\Error\Middleware\ErrorHandlerMiddleware;
@@ -30,9 +24,6 @@ use Cake\Http\Middleware\BodyParserMiddleware;
 use Cake\Http\MiddlewareQueue;
 use Cake\Routing\Middleware\AssetMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
-use Tuupola\Middleware\CorsMiddleware;
 
 /**
  * Application setup class.
@@ -40,7 +31,7 @@ use Tuupola\Middleware\CorsMiddleware;
  * This defines the bootstrapping logic and middleware layers you
  * want to use in your application.
  */
-class Application extends BaseApplication implements AuthenticationServiceProviderInterface
+class Application extends BaseApplication
 {
     /**
      * Load all the application configuration and bootstrap logic.
@@ -77,7 +68,6 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
      */
     public function middleware(MiddlewareQueue $middlewareQueue): MiddlewareQueue
     {
-        $authenticationMiddleware = new AuthenticationMiddleware($this);
         $middlewareQueue
             // Catch any exceptions in the lower layers,
             // and make an error page/response
@@ -86,14 +76,6 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
             // Handle plugin/theme assets like CakePHP normally does.
             ->add(new AssetMiddleware([
                 'cacheTime' => Configure::read('Asset.cacheTime'),
-            ]))
-            ->add(new CorsMiddleware([
-                'origin' => ['*'],
-                'methods' => ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
-                'headers.allow' => ['Authorization', 'Content-Type', 'Api-token'],
-                'headers.expose' => ['X-Auth-token'],
-                'credentials' => true,
-                'cache' => 0
             ]))
 
             // Add routing middleware.

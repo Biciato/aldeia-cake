@@ -37,14 +37,7 @@ class AppController extends Controller
 
     public function initialize(): void
       {
-        $this->loadComponent('RequestHandler', [
-            'enableBeforeRedirect' => false,
-        ]);
-
-        $this->loadComponent('Authentication.Authentication', [
-            'requireIdentity' => false
-        ]);
-        $this->loadComponent('Auth',
+        $this->loadComponent('Auth', 
           [
                 'authenticate' => [
                     'Form' => [
@@ -53,27 +46,27 @@ class AppController extends Controller
                         'passwordHasher' => 'Default',
                         'unauthorizedRedirect' => '/login',
                         'finder' => 'authenticate'
-                    ]
-                ],
+                ]
+            ],
                 'authorize' => 'Controller'
           ]);
         $user = $this->Auth->user();
-        $this->mapa_auxiliares =
+        $this->mapa_auxiliares = 
           [
-            'parentesco' =>
+            'parentesco' =>  
               [
                 'form' => 'default',
                 'label' => 'Parentescos',
                 'tableClass' => 'Parentescos'
               ],
-            'permanencias' =>
+            'permanencias' =>  
               [
-                'form' =>
+                'form' => 
                  [
                     'rows' =>
                       [
                         [
-                          'nome' =>
+                          'nome' => 
                             [
                               'type' => 'text',
                               'label' => 'Nome',
@@ -101,44 +94,44 @@ class AppController extends Controller
                 'label' => 'Permanências',
                 'tableClass' => 'Permanencias'
               ],
-            'turnos' =>
+            'turnos' =>  
               [
                 'form' => 'default',
                 'label' => 'Turnos',
                 'tableClass' => 'Turnos'
               ],
-            'meios_conhecimento' =>
+            'meios_conhecimento' =>  
               [
                 'form' => 'default',
                 'label' => 'Meios de conhecimento',
                 'tableClass' => 'MeiosConhecimento'
               ],
-            'meios_atendimento' =>
+            'meios_atendimento' =>  
               [
                 'form' => 'default',
                 'label' => 'Meios de atendimento',
                 'tableClass' => 'MeiosAtendimento'
               ],
-            'acompanhamentos_sistematicos' =>
+            'acompanhamentos_sistematicos' =>  
               [
                 'form' => 'default',
                 'label' => 'Acompanhamentos Sistemáticos',
                 'tableClass' => 'AcompanhamentosSistematicos'
               ],
-            'unidades' =>
+            'unidades' => 
               [
-                'form' =>
+                'form' => 
                   [
                     'rows' =>
                       [
                         [
-                          'nome' =>
+                          'nome' => 
                             [
                               'type' => 'text',
                               'label' => 'Nome',
                               'col'   => 4
                             ],
-                          'descricao' =>
+                          'descricao' => 
                             [
                               'type' => 'text',
                               'label' => 'Descrição',
@@ -326,24 +319,24 @@ class AppController extends Controller
               ],
             'agrupamentos' =>
               [
-                'form' =>
+                'form' => 
                   [
                     'rows' =>
                       [
                         [
-                          'nome' =>
+                          'nome' => 
                             [
                               'type' => 'text',
                               'label' => 'Nome',
                               'col' => 5
                             ],
-                          'idade_inicial' =>
+                          'idade_inicial' => 
                             [
                               'type' => 'number',
                               'label' => 'Idade Inicial (meses)',
                               'col' => 3
                             ],
-                          'idade_final' =>
+                          'idade_final' => 
                             [
                               'type' => 'number',
                               'label' => 'Idade Final (meses)',
@@ -373,12 +366,12 @@ class AppController extends Controller
               ],
             'horarios' =>
               [
-                'form' =>
+                'form' => 
                   [
                     'rows' =>
                       [
                         [
-                          'horario_entrada' =>
+                          'horario_entrada' => 
                             [
                               'type' => 'text',
                               'label' => 'Horário de entrada',
@@ -386,7 +379,7 @@ class AppController extends Controller
                               'mask' => '99:99',
                               'field-val' => 'horario_entrada_formatado'
                             ],
-                          'horario_saida' =>
+                          'horario_saida' => 
                             [
                               'type' => 'text',
                               'label' => 'Horário de saída',
@@ -407,32 +400,32 @@ class AppController extends Controller
                 'label' => 'Horários',
                 'tableClass' => 'Horarios'
               ],
-            'tipos_interacao' =>
+            'tipos_interacao' =>  
               [
                 'form' => 'default',
                 'label' => 'Tipos de interação',
                 'tableClass' => 'TiposInteracao'
               ],
-            'funcoes_colaboradores' =>
+            'funcoes_colaboradores' => 
               [
                 'form' => 'default',
                 'label' => 'Funções de colaboradores',
                 'tableClass' => 'FuncoesColaboradores'
               ],
-            'estados' =>
+            'estados' => 
               [
-                'form' =>
+                'form' => 
                  [
                     'rows' =>
                       [
                         [
-                          'nome' =>
+                          'nome' => 
                             [
                               'type' => 'text',
                               'label' => 'Nome',
                               'col' => 8,
                             ],
-                          'sigla' =>
+                          'sigla' => 
                             [
                               'type' => 'text',
                               'label' => 'Sigla',
@@ -451,19 +444,19 @@ class AppController extends Controller
                 'label' => 'Estados',
                 'tableClass' => 'Estados'
               ],
-            'nacionalidades' =>
+            'nacionalidades' => 
               [
                 'form' => 'default',
                 'label' => 'Nacionalidades',
                 'tableClass' => 'Nacionalidades'
               ],
-            'cores' =>
+            'cores' => 
               [
                 'form' => 'default',
                 'label' => 'Cores',
                 'tableClass' => 'Cores'
               ],
-            'estados_civis' =>
+            'estados_civis' => 
               [
                 'form' => 'default',
                 'label' => 'Estados civis',
@@ -475,14 +468,14 @@ class AppController extends Controller
                 'label' => 'Níveis',
                 'tableClass' => 'Niveis'
               ],
-            'cursos' =>
+            'cursos' =>  
               [
-                'form' =>
+                'form' => 
                  [
                     'rows' =>
                       [
                         [
-                          'nome' =>
+                          'nome' => 
                             [
                               'type' => 'text',
                               'label' => 'Nome',
@@ -510,14 +503,14 @@ class AppController extends Controller
                 'label' => 'Cursos',
                 'tableClass' => 'Cursos'
               ],
-            'servicos' =>
+            'servicos' =>  
               [
-                'form' =>
+                'form' => 
                  [
                     'rows' =>
                       [
                         [
-                          'nome' =>
+                          'nome' => 
                             [
                               'type' => 'text',
                               'label' => 'Nome',
@@ -545,7 +538,7 @@ class AppController extends Controller
               ],
            ];
           ksort($this->mapa_auxiliares);
-        $this->mapa_modulos =
+        $this->mapa_modulos = 
           [
             [
               'controller' => 'dashboard',
@@ -638,7 +631,7 @@ class AppController extends Controller
             ],
             [
               'type' => 'multiple',
-              'submenu' =>
+              'submenu' => 
                 [
                   [
                     'type' => 'single',
@@ -659,7 +652,7 @@ class AppController extends Controller
             ],
             [
               'type' => 'multiple',
-              'submenu' =>
+              'submenu' => 
                 [
                   [
                     'type' => 'single',
@@ -675,7 +668,7 @@ class AppController extends Controller
             ],
             [
               'type' => 'multiple',
-              'submenu' =>
+              'submenu' => 
                 [
                   [
                     'type' => 'single',
@@ -691,7 +684,7 @@ class AppController extends Controller
             ],
             [
               'type' => 'multiple',
-              'submenu' =>
+              'submenu' => 
                 [
                   [
                     'type' => 'single',
@@ -707,7 +700,7 @@ class AppController extends Controller
             ],
             [
               'type' => 'multiple',
-              'submenu' =>
+              'submenu' => 
                 [
                   [
                     'type' => 'config_module',
@@ -720,7 +713,7 @@ class AppController extends Controller
     public function booleanVal()
      {
         return [0 => 'Não', 1 => 'Sim'];
-     }
+     } 
     public function opcoesObrigatorio()
       {
         return [0 => 'Não', 1 => 'Sim', 2 => 'Sistema creche'];
@@ -821,27 +814,27 @@ class AppController extends Controller
     public function opcoesAgrupamentos()
       {
         $agrupamentosTable = TableRegistry::get('Agrupamentos');
-        return $agrupamentosTable->find('list', ['keyField' => 'id', 'valueField' => 'nome'])->toArray();
+        return $agrupamentosTable->find('list', ['keyField' => 'id', 'valueField' => 'nome'])->toArray(); 
       }
     public function opcoesNiveis()
       {
         $niveisTable = TableRegistry::get('Niveis');
-        return $niveisTable->find('list', ['keyField' => 'id', 'valueField' => 'nome'])->toArray();
+        return $niveisTable->find('list', ['keyField' => 'id', 'valueField' => 'nome'])->toArray(); 
       }
      public function opcoesTurnos()
       {
         $turnosTable = TableRegistry::get('Turnos');
-        return $turnosTable->find('list', ['keyField' => 'id', 'valueField' => 'nome'])->toArray();
+        return $turnosTable->find('list', ['keyField' => 'id', 'valueField' => 'nome'])->toArray(); 
       }
     public function opcoesHorarios()
       {
         $horariosTable = TableRegistry::get('Horarios');
-        return $horariosTable->find('list', ['keyField' => 'id', 'valueField' => 'nome'])->toArray();
+        return $horariosTable->find('list', ['keyField' => 'id', 'valueField' => 'nome'])->toArray(); 
       }
     public function opcoesUnidades()
       {
         $unidadesTable = TableRegistry::get('Unidades');
-        return $unidadesTable->find('list', ['keyField' => 'id', 'valueField' => 'nome'])->toArray();
+        return $unidadesTable->find('list', ['keyField' => 'id', 'valueField' => 'nome'])->toArray(); 
       }
     private function modulos_permissionados()
       {
@@ -860,7 +853,7 @@ class AppController extends Controller
             if($user['modulos_acesso'] == '*')
               {
                 return true;
-              }
+              }       
             $modulos = json_decode($user['modulos_acesso'], true);
             if(is_array($modulos))
               {
@@ -883,9 +876,9 @@ class AppController extends Controller
     public function resultadosCursosEntities()
       {
         $cursosTable = TableRegistry::get('Cursos');
-        return $cursosTable->find('all',
+        return $cursosTable->find('all', 
           [
-            'order' =>
+            'order' =>  
               [
                 'Cursos.ordenacao ASC',
               ]
@@ -894,9 +887,9 @@ class AppController extends Controller
     public function resultadosTurnosEntities()
       {
         $turnos = TableRegistry::get('Turnos');
-        return $turnos->find('all',
+        return $turnos->find('all', 
           [
-            'order' =>
+            'order' =>  
               [
                 'Turnos.ordenacao ASC',
               ]
@@ -904,7 +897,7 @@ class AppController extends Controller
       }
     public function numeroServicos($servico_aux = null, $unidade = null, $curso = null, $agrupamento = null, $nivel = null, $turno = null, $permanencia = null, $horario = null, $counting = true)
       {
-        $conds =
+        $conds = 
           [
 
           ];
@@ -956,11 +949,11 @@ class AppController extends Controller
         $interacoesTable = TableRegistry::get('Interacoes');
         $notificacoesTable = TableRegistry::get('Notificacoes');
         $now = new \DateTime();
-        $interacoesANotificar = $interacoesTable->find('all',
+        $interacoesANotificar = $interacoesTable->find('all', 
           [
             'conditions' =>
               [
-                'concluida' => false,
+                'concluida' => false, 
                 'data' => $now->format('Y-m-d'),
               ]
           ])->contain(
@@ -971,7 +964,7 @@ class AppController extends Controller
               ],
             'Responsaveis' =>
               [
-                'Pessoas' =>
+                'Pessoas' => 
                   [
                     'Login'
                   ]
@@ -981,7 +974,7 @@ class AppController extends Controller
         $notificacoes = [];
         foreach($interacoesANotificar as $interacao)
           {
-            $existente = $notificacoesTable->find('all',
+            $existente = $notificacoesTable->find('all', 
               [
                 'conditions' =>
                   [
@@ -991,7 +984,7 @@ class AppController extends Controller
               ])->count();
             if(!$existente)
               {
-                $notificacao =
+                $notificacao = 
                   [
                     'tipo' => 1,
                     'metadata' => json_encode(
@@ -1031,7 +1024,7 @@ class AppController extends Controller
                 $action = ($modulo['action'] == 'index') ? '' : "/" . $modulo['action'];
                 $label = '/' . $modulo['controller'] . $action;
               }
-            $opcoes[$modulo['controller'] . "/" . $modulo['action']] = $label;
+            $opcoes[$modulo['controller'] . "/" . $modulo['action']] = $label; 
           }
         return $opcoes;
       }
@@ -1040,7 +1033,7 @@ class AppController extends Controller
       {
         $interacoesTable = TableRegistry::get('Interacoes');
         $now = new \DateTime();
-        $interacoesAProcessar = $interacoesTable->find('all',
+        $interacoesAProcessar = $interacoesTable->find('all', 
           [
             'conditions' =>
               [
@@ -1049,21 +1042,21 @@ class AppController extends Controller
                 'OR' =>
                   [
                       [
-                        'data <' => $now->format('Y-m-d')
+                        'data <' => $now->format('Y-m-d')  
                       ],
                     'AND' =>
                       [
                         'data' => $now->format('Y-m-d'),
-                        'hora <=' => $now->format('H:i:s')
+                        'hora <=' => $now->format('H:i:s') 
                       ]
                   ]
               ]
           ])->contain(
           [
-            'Prospects' =>
+            'Prospects' => 
               [
-                'Pessoas',
-                'Parentes' =>
+                'Pessoas', 
+                'Parentes' => 
                   [
                     'Pessoas'
                   ]
@@ -1108,10 +1101,10 @@ class AppController extends Controller
             $email->attachments([$interacao->titulo_arquivo => $interacao->caminho_arquivo]);
           }
         return (bool) $email->send();
-      }
+      } 
     private function formatarData($data, $padrao_br = false)
       {
-        $data_pieces =
+        $data_pieces = 
           [
             'Y' => substr($data, 4, 4),
             'm' => substr($data, 2, 2),
@@ -1120,13 +1113,13 @@ class AppController extends Controller
         if(checkdate($data_pieces['m'], $data_pieces['d'], $data_pieces['Y']))
           {
             return (!$padrao_br) ? implode('-', $data_pieces) : implode('/', array_reverse($data_pieces));
-          }
+          } 
         return false;
-      }
+      }  
     public function baixaBoletos()
       {
-        $this->autoRender = false;
-        $arquivos_retorno_path =
+        $this->autoRender = false; 
+        $arquivos_retorno_path = 
               (object)[
                 'novos' => WWW_ROOT . 'arquivos_retorno' . DS . 'novos',
                 'lidos' => WWW_ROOT . 'arquivos_retorno' . DS . 'lidos'
@@ -1135,7 +1128,7 @@ class AppController extends Controller
         $registrosPagamentoTable = TableRegistry::get('RegistrosPagamento');
         $boletosTable = TableRegistry::get('Boletos');
         $file_suffix = 'MOV';
-        $other_suffixes =
+        $other_suffixes = 
           [
             'REL',
             'CON',
@@ -1171,7 +1164,7 @@ class AppController extends Controller
                     if($segmento == 'T')
                       {
                         $segunda_linha    = $linhas[($numero_linha + 1)];
-                        $segundo_segmento = substr($segunda_linha, 13, 1);
+                        $segundo_segmento = substr($segunda_linha, 13, 1); 
                         if($segundo_segmento == 'U')
                           {
                             $nosso_numero    = substr($linha, 40, 12);
@@ -1179,7 +1172,7 @@ class AppController extends Controller
                             $valor_liquido   = substr($segunda_linha, 92, 15);
                             $data_pagamento  = $this->formatarData(substr($segunda_linha, 137, 8));
                             $data_efetivacao = $this->formatarData(substr($segunda_linha, 145, 8));
-                            $boleto = $boletosTable->find('all',
+                            $boleto = $boletosTable->find('all', 
                               [
                                 'conditions' =>
                                   [
@@ -1188,7 +1181,7 @@ class AppController extends Controller
                                   ]
                               ])->first();
                             $boleto_id = ($boleto) ? $boleto->id : '0';
-                            $registro_pagamento =
+                            $registro_pagamento = 
                               [
                                 'nosso_numero'     => $nosso_numero,
                                 'unidade_id'       => $unidade->id,
@@ -1201,9 +1194,9 @@ class AppController extends Controller
                                 'data_recebimento' => $data_efetivacao
                               ];
                             $registro = $registrosPagamentoTable->newEntity($registro_pagamento);
-                            $existente = $registrosPagamentoTable->find('all',
+                            $existente = $registrosPagamentoTable->find('all', 
                               [
-                                'conditions' =>
+                                'conditions' => 
                                   [
                                     'nosso_numero' => $nosso_numero,
                                     'arquivo_nome'  => $arquivo
@@ -1215,7 +1208,7 @@ class AppController extends Controller
                               }
                           }
                       }
-                  }
+                  } 
 
               }
             rename($arquivos_retorno_path->novos . DS . $arquivo, $arquivos_retorno_path->lidos . DS . $arquivo);

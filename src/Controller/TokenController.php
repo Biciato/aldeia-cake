@@ -1,21 +1,17 @@
 <?php
 namespace App\Controller;
 
-use Firebase\JWT\JWT;
 use Cake\Http\Response;
-use Cake\Controller\AppController;
+use Cake\ORM\TableRegistry;
+use Cake\I18n\Time;
+use Cake\Controller\Controller;
 
-class TokenController extends AppController
+class TokenController extends Controller
 {
     public function initialize(): void
     {
         parent::initialize();
         $this->loadComponent('RequestHandler');
-    }
-
-    public function beforeFilter(\Cake\Event\EventInterface $event)
-    {
-        parent::beforeFilter($event);
     }
 
     /**
@@ -24,42 +20,62 @@ class TokenController extends AppController
      */
     public function token(): Response
     {
-        $result = $this->Authentication->getResult();
-        if ($result->isValid()) {
-            $privateKey = file_get_contents('config/jwt.key');
-            $user = $result->getData();
-            $payload = [
-                'iss' => 'myapp',
-                'sub' => $user->id,
-                'exp' => time() + 60,
-            ];
-            $json = [
-                'token' => JWT::encode($payload, $privateKey, 'RS256'),
-            ];
-        } else {
-            $this->response = $this->response->withStatus(401);
-            $json = ['error' => 'invalid credentials'];
+        $data = $this->request->getData();
+        $table = TableRegistry::getTableLocator()->get('Login');
+
+        $query = $table->query();
+
+        $user = $query->where(['Pessoas.email' => $data['username']], [], true)->contain(['Pessoas'])->first();
+        if (!isset($user)) {
+            $status = 403;
         }
-        $this->set(compact('json'));
-        $this->viewBuilder()->setOption('serialize', 'json');
+
+        if (!password_verify($data['password'], $user->senha)) {
+            $status = 403;
+        }
+        $key = 'aldeiasecret';
+
+        //Header Token
+        $header = [
+            'typ' => 'JWT',
+            'alg' => 'HS256'
+        ];
+
+        //Payload - Content
+        $payload = [
+            'exp' => Time::now()->getTimestamp(),
+            'uid' => $user->id,
+            'email' => $data['username'],
+        ];
+
+        //JSON
+        $header = json_encode($header);
+        $payload = json_encode($payload);
+
+        //Base 64
+        $header = base64_encode($header);
+        $payload = base64_encode($payload);
+
+        //Sign
+        $sign = hash_hmac('sha256', $header . "." . $payload, $key, true);
+        $sign = base64_encode($sign);
+
+        //Token
+        $token = $header . '.' . $payload . '.' . $sign;
+        if (!isset($status)) {
+            $user->api_token = $token;
+            $table->save($user);
+        }
 
         return $this->response
                 ->withType('application/json')
-                ->withStringBody(json_encode($json));
+                ->withStringBody(json_encode([
+                    'status' => $status ?? 200,
+                    'credentials' => [
+                        'token' => isset($status) ? '' : $token,
+                        'id' => isset($status) ? '' : $user->id
+                    ],
+                    '_serialize' => ['credentials']
+                ]));
     }
-
-    public function teste()
-    {
-        $service = $this->request->getAttribute('authentication');
-        $this->set([
-            'recipes' => ['mensagem' => 'teste'],
-            '_serialize' => ['recipes']
-        ]);
-        $this->viewBuilder()->setOption('serialize', 'json');
-
-        return $this->response
-                ->withType('application/json')
-                ->withStringBody(json_encode(['mensagem' => 'teste']));
-    }
-
 }
