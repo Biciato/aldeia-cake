@@ -17,7 +17,7 @@ class CheckTokenMiddleware implements MiddlewareInterface
     ): ResponseInterface
     {
         $response = $handler->handle($request);
-        $path = str_replace('/api', '', $request->getPath());
+        $path = str_replace('/api/', '', $request->getPath());
         if (in_array($path, $this->excepts) === false) {
             $authHeader = $request->getHeader('Authorization');
 
