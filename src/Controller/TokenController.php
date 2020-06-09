@@ -22,16 +22,20 @@ class TokenController extends Controller
     {
         $data = $this->request->getData();
         $table = TableRegistry::getTableLocator()->get('Login');
+        $message = 'success';
+        $status = 200;
 
         $query = $table->query();
 
         $user = $query->where(['Pessoas.email' => $data['username']], [], true)->contain(['Pessoas'])->first();
         if (!isset($user)) {
-            $status = 403;
+            $status = 400;
+            $message = 'Usuário não encontrado';
         }
 
         if (!password_verify($data['password'], $user->senha)) {
-            $status = 403;
+            $status = 400;
+            $message = 'Senha inválida';
         }
         $key = 'aldeiasecret';
 
@@ -62,7 +66,7 @@ class TokenController extends Controller
 
         //Token
         $token = $header . '.' . $payload . '.' . $sign;
-        if (!isset($status)) {
+        if ($status === 200) {
             $user->api_token = $token;
             $table->save($user);
         }
@@ -70,12 +74,12 @@ class TokenController extends Controller
         return $this->response
                 ->withType('application/json')
                 ->withStringBody(json_encode([
-                    'status' => $status ?? 200,
+                    'status' => $status,
                     'credentials' => [
                         'token' => isset($status) ? '' : $token,
                         'id' => isset($status) ? '' : $user->id
                     ],
-                    '_serialize' => ['credentials']
+                    'message' => $message
                 ]));
     }
 }
