@@ -13,30 +13,8 @@ class TokenController extends Controller
         parent::initialize();
         $this->loadComponent('RequestHandler');
     }
-
-    /**
-     * Verificar e retorna um token de autenticação com dados do usuário
-     * @return Response
-     */
-    public function token(): Response
+    private function generateToken($id, $email)
     {
-        $data = $this->request->getData();
-        $table = TableRegistry::getTableLocator()->get('Login');
-        $message = 'success';
-        $status = 200;
-
-        $query = $table->query();
-
-        $user = $query->where(['Pessoas.email' => $data['username']], [], true)->contain(['Pessoas'])->first();
-        if (!isset($user)) {
-            $status = 400;
-            $message = 'Usuário não encontrado';
-        }
-
-        if (!password_verify($data['password'], $user->senha)) {
-            $status = 400;
-            $message = 'Senha inválida';
-        }
         $key = 'aldeiasecret';
 
         //Header Token
@@ -48,8 +26,8 @@ class TokenController extends Controller
         //Payload - Content
         $payload = [
             'exp' => Time::now()->getTimestamp(),
-            'uid' => $user->id,
-            'email' => $data['username'],
+            'uid' => $id,
+            'email' => $email,
         ];
 
         //JSON
@@ -65,20 +43,49 @@ class TokenController extends Controller
         $sign = base64_encode($sign);
 
         //Token
-        $token = $header . '.' . $payload . '.' . $sign;
-        if ($status === 200) {
+        return $header . '.' . $payload . '.' . $sign;
+    }
+
+    /**
+     * Verificar e retorna um token de autenticação com dados do usuário
+     * @return Response
+     */
+    public function token(): Response
+    {
+        $data = $this->request->getData();
+        $table = TableRegistry::getTableLocator()->get('Login');
+        $message = 'success';
+        $status = 200;
+
+        $query = $table->query();
+
+        $user = $query->where(['Pessoas.email' => $data['username']], [], true)->contain(['Pessoas'])->first();
+        if (isset($user)) {
+            if (!password_verify($data['password'], $user->senha)) {
+                $status = 400;
+                $message = 'Senha inválida';
+            } else {
+                $token = $this->generateToken($user->id, $data['username']);
+            }
+        } else {
+            $status = 400;
+            $message = 'Usuário não encontrado';
+        }
+
+        if (isset($token)) {
             $user->api_token = $token;
             $table->save($user);
+            $credentials = [
+                'token' => $token,
+                'id' => $user->id
+            ];
         }
 
         return $this->response
                 ->withType('application/json')
                 ->withStringBody(json_encode([
                     'status' => $status,
-                    'credentials' => [
-                        'token' => isset($status) ? '' : $token,
-                        'id' => isset($status) ? '' : $user->id
-                    ],
+                    'credentials' => $credentials ?? null,
                     'message' => $message
                 ]));
     }
