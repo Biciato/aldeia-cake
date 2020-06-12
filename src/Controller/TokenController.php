@@ -53,14 +53,16 @@ class TokenController extends Controller
     public function token(): Response
     {
         $data = $this->request->getData();
-        $table = TableRegistry::getTableLocator()->get('Login');
+        $loginTable = TableRegistry::getTableLocator()->get('Login');
+        $pessoasTable = TableRegistry::getTableLocator()->get('Pessoas');
+        $parentesTable = TableRegistry::getTableLocator()->get('Parentes');
+        $colaboradoresTable = TableRegistry::getTableLocator()->get('Colaboradores');
+        $funcoesColaboradoresTable = TableRegistry::getTableLocator()->get('FuncoesColaboradores');
         $message = 'success';
         $status = 200;
-
-        $query = $table->query();
-
-        $user = $query->where(['Pessoas.email' => $data['username']], [], true)->contain(['Pessoas'])->first();
-        if (isset($user)) {
+        $pessoa = $pessoasTable->find()->where(['email' => $data['username']])->first();
+        if (isset($pessoa)) {
+            $user = $loginTable->find()->where(['Pessoas.email' => $pessoa->email], [], true)->contain(['Pessoas'])->first();
             if (!password_verify($data['password'], $user->senha)) {
                 $status = 400;
                 $message = 'Senha inválida';
@@ -73,11 +75,21 @@ class TokenController extends Controller
         }
 
         if (isset($token)) {
+            if ($parentesTable->find()->where(['pessoa_id' => $pessoa->id])->first() !== null) {
+                $role = 'Parente';
+            } else {
+                if ($colaboradoresTable->find()->where(['pessoa_id' => $pessoa->id])->first() !== null) {
+                    $role = $funcoesColaboradoresTable->find()->where(['id' => $colaborador->funcao_id])->first();
+                } else {
+                    $role = 'Admin';
+                }
+            }
             $user->api_token = $token;
-            $table->save($user);
+            $loginTable->save($user);
             $credentials = [
                 'token' => $token,
-                'id' => $user->id
+                'id' => $user->id,
+                'role' => $role
             ];
         }
 
