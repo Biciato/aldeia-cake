@@ -89,14 +89,15 @@ class TokenController extends Controller
             $credentials = [
                 'token' => $token,
                 'id' => $user->id,
-                'role' => $role
+                'role' => $role,
+                'name' => $pessoa['nome']
             ];
         }
 
         return $this->response
                 ->withType('application/json')
+                ->withStatus($status)
                 ->withStringBody(json_encode([
-                    'status' => $status,
                     'credentials' => $credentials ?? null,
                     'message' => $message
                 ]));
