@@ -142,7 +142,20 @@ $routes->scope('/api', function (RouteBuilder $builder) {
     $builder->registerMiddleware('checktoken', \App\Middleware\CheckTokenMiddleware::class);
     $builder->applyMiddleware('checktoken');
 
+    // Token
     $builder->post('/token', ['controller' => 'Token', 'action' => 'token']);
     $builder->post('/recuperar-senha', ['controller' => 'LoginAPI', 'action' => 'recuperarSenha']);
+
+    // Pessoa
+    $builder->get('/pessoa/{id}', ['controller' => 'PessoaApi', 'action' => 'getPessoa'])->setPass(['id']);
+    $builder->put('/pessoa/{id}', ['controller' => 'PessoaApi', 'action' => 'updatePessoa'])->setPass(['id']);
+
+    // Login
+    $builder->post('/update-password/{id}', ['controller' => 'LoginAPI', 'action' => 'updatePassword'])->setPass(['id']);
+
+    // Endereço
+    $builder->get('/endereco/{pessoaId}', ['controller' => 'EnderecoApi', 'action' => 'getEndereco'])->setPass(['pessoaId']);
+
+    // Fallback
     $builder->fallbacks();
 });

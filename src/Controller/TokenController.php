@@ -89,6 +89,7 @@ class TokenController extends Controller
             $credentials = [
                 'token' => $token,
                 'id' => $user->id,
+                'id_pessoa' => $pessoa->id,
                 'role' => $role,
                 'name' => $pessoa['nome']
             ];

@@ -268,9 +268,9 @@ return [
            /* 'username' => 'aldeiasige3',
             'password' => 'ZCmn2WeTT3kmNB',
             'database' => 'aldeiasige3',*/
-            'username' => 'sigehomologacao',
-            'password' => 'rH#e9h+98l*MM2',
-            'database' => 'sigehomologacao',
+            'username' => 'root',
+            'password' => 'otaicib84',
+            'database' => 'aldeia',
             /*
              * You do not need to set this flag to use full utf-8 encoding (internal default since CakePHP 3.6).
              */
